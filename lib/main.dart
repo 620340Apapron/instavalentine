@@ -8,28 +8,23 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
 
-  var postsList;
-
-  void _post() {
-    List<Map<String, Object>> postsList = [
-      {
-        'name': 'Raksami',
-        'image': Image.asset('assets/images/'),
-        'text': 'HappyValentine'
-      },
-      {
-        'name': 'Marisa',
-        'image': Image.asset('assets/images/'),
-        'text': 'Valentine Day'
-      },
-      {
-        'name': 'Jitdapa',
-        'image': Image.asset('assets/images/'),
-        'text': 'Happy Love Day'
-      },
-    ];
-  }
-
+  final List<Map<String, Object>> postsList = [
+    {
+      'name': 'Raksami',
+      'image': Image.asset('assets/images/'),
+      'text': 'HappyValentine'
+    },
+    {
+      'name': 'Marisa',
+      'image': Image.asset('assets/images/'),
+      'text': 'Valentine Day'
+    },
+    {
+      'name': 'Jitdapa',
+      'image': Image.asset('assets/images/'),
+      'text': 'Happy Love Day'
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +43,7 @@ class MyApp extends StatelessWidget {
                   children: [
                     Text(item['name']),
                     Row(
-                      children: [Text(item['image']), Text(item('text'))],
+                      children: [Text(item['image']), Text(item['text'])],
                     ),
                   ],
                 ),
